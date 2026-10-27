@@ -13,11 +13,14 @@ dataset_properties:
     allow_aggregates: true
     allow_local_aggs: true
     allow_peer_aggs: true
+    allow_preferred_aggs: false
   lab_fact_sales:
     allow_aggregates: true
     allow_local_aggs: true
     allow_peer_aggs: true
+    allow_preferred_aggs: false
   lab_fact_budget:
     allow_aggregates: true
     allow_local_aggs: true
     allow_peer_aggs: true
+    allow_preferred_aggs: false
