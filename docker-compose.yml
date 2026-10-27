@@ -1,0 +1,43 @@
+name: "${COMPOSITE_PROJECT_NAME:-atscale-composite-lab}"
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: "${COMPOSITE_PG_CONTAINER_NAME:-atscale-composite-postgres}"
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: atscale_lab
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: local_admin_only
+      POSTGRES_INITDB_ARGS: --auth-host=scram-sha-256 --auth-local=trust
+    ports:
+      - "${COMPOSITE_PG_BIND:-127.0.0.1}:${COMPOSITE_PG_PORT:-54329}:5432"
+    volumes:
+      - composite_pg_data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    command:
+      - postgres
+      - -c
+      - password_encryption=scram-sha-256
+      - -c
+      - log_destination=stderr
+      - -c
+      - logging_collector=off
+      - -c
+      - log_min_duration_statement=0
+      - -c
+      - "log_line_prefix=%m [%p] user=%u db=%d app=%a client=%h "
+      - -c
+      - log_connections=on
+      - -c
+      - log_disconnections=on
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d atscale_lab"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+      start_period: 5s
+
+volumes:
+  composite_pg_data:
+    name: "${COMPOSITE_PG_VOLUME:-atscale-composite-pg-data}"

@@ -1,0 +1,7 @@
+.env
+.DS_Store
+*.log
+*.dump
+*.sql.gz
+.idea/
+.vscode/
