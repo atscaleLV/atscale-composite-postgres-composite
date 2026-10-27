@@ -11,12 +11,12 @@ dataset_properties:
   lab_dim_date_control:
     allow_aggregates: true
     allow_local_aggs: true
-    allow_peer_aggs: false
+    allow_peer_aggs: true
   lab_fact_sales_control:
     allow_aggregates: true
     allow_local_aggs: true
-    allow_peer_aggs: false
+    allow_peer_aggs: true
   lab_fact_budget_control:
     allow_aggregates: true
     allow_local_aggs: true
-    allow_peer_aggs: false
+    allow_peer_aggs: true
