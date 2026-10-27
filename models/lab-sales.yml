@@ -11,7 +11,7 @@ relationships:
         - date_key
     to:
       dimension: Lab Date Control
-      level: Date Key
+      level: Date
 metrics:
   - unique_name: m_sales_amount_sum_control
     folder: Lab Measures
