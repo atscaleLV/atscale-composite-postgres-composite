@@ -1,0 +1,43 @@
+unique_name: Lab Date
+object_type: dimension
+label: Date
+type: time
+hierarchies:
+  - unique_name: Calendar
+    label: Calendar
+    filter_empty: "yes"
+    levels:
+      - unique_name: Year
+      - unique_name: Month
+      - unique_name: Date
+level_attributes:
+  - unique_name: Year
+    label: Year
+    dataset: lab_dim_date
+    name_column: year_number
+    key_columns:
+      - year_number
+    time_unit: year
+  - unique_name: Month
+    label: Month
+    dataset: lab_dim_date
+    name_column: month_name
+    key_columns:
+      - month_start
+    time_unit: month
+  - unique_name: Date
+    label: Date
+    dataset: lab_dim_date
+    name_column: date_day
+    key_columns:
+      - date_day
+    time_unit: day
+  - unique_name: Date Key
+    label: Date Key
+    dataset: lab_dim_date
+    name_column: date_key
+    key_columns:
+      - date_key
+    is_unique_key: true
+    time_unit: day
+    visualize_in_bi_tool: false

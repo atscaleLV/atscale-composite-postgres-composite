@@ -1,0 +1,16 @@
+unique_name: lab_sales
+object_type: model
+label: Lab Sales
+description: One-fact sales model routed through the pg_model_a warehouse.
+relationships:
+  - unique_name: lab_sales_to_date
+    from:
+      dataset: lab_fact_sales
+      join_columns:
+        - date_key
+    to:
+      dimension: Lab Date
+      level: Date Key
+metrics:
+  - unique_name: m_sales_amount_sum
+    folder: Lab Measures

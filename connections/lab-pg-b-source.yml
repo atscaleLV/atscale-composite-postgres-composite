@@ -1,0 +1,6 @@
+unique_name: lab_pg_b_source
+object_type: connection
+label: Lab PostgreSQL B - Budget Source
+as_connection: pg_model_b
+database: atscale_lab
+schema: src_b

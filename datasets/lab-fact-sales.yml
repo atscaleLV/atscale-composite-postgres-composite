@@ -1,0 +1,12 @@
+unique_name: lab_fact_sales
+object_type: dataset
+label: Lab Sales Fact
+connection_id: lab_pg_a_source
+table: fact_sales
+columns:
+  - name: sales_row_id
+    data_type: bigint
+  - name: date_key
+    data_type: int
+  - name: sales_amount
+    data_type: double

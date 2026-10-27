@@ -1,0 +1,6 @@
+unique_name: lab_pg_a_shared
+object_type: connection
+label: Lab PostgreSQL A - Shared
+as_connection: pg_model_a
+database: atscale_lab
+schema: shared

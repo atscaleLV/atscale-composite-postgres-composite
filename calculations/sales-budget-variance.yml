@@ -1,0 +1,7 @@
+unique_name: c_sales_budget_variance
+object_type: metric_calc
+label: Sales vs Budget Variance
+description: Sales amount minus budget amount across the two component models.
+expression: >-
+  [Measures].[m_sales_amount_sum] - [Measures].[m_budget_amount_sum]
+format: "$#,##0.00"

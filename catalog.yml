@@ -1,0 +1,22 @@
+unique_name: composite_postgres_lab
+object_type: catalog
+label: Composite PostgreSQL Lab
+version: 1.5
+description: >-
+  Minimal two-connection lab for observing composite-model query routing and
+  aggregate behavior against PostgreSQL.
+aggressive_agg_promotion: false
+build_speculative_aggs: false
+dataset_properties:
+  lab_dim_date:
+    allow_aggregates: true
+    allow_local_aggs: true
+    allow_peer_aggs: true
+  lab_fact_sales:
+    allow_aggregates: true
+    allow_local_aggs: true
+    allow_peer_aggs: true
+  lab_fact_budget:
+    allow_aggregates: true
+    allow_local_aggs: true
+    allow_peer_aggs: true

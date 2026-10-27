@@ -1,0 +1,12 @@
+unique_name: lab_fact_budget
+object_type: dataset
+label: Lab Budget Fact
+connection_id: lab_pg_b_source
+table: fact_budget
+columns:
+  - name: budget_row_id
+    data_type: bigint
+  - name: date_key
+    data_type: int
+  - name: budget_amount
+    data_type: double

@@ -1,0 +1,6 @@
+unique_name: lab_pg_a_source
+object_type: connection
+label: Lab PostgreSQL A - Sales Source
+as_connection: pg_model_a
+database: atscale_lab
+schema: src_a
