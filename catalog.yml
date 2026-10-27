@@ -1,10 +1,11 @@
-unique_name: composite_postgres_lab_single_connection
+unique_name: composite_postgres_cross_repo_control
 object_type: catalog
-label: Composite PostgreSQL Lab - Single Connection Control
+label: Composite PostgreSQL Lab - Cross-Repository Control
 version: 1.8
 description: >-
-  Deployable positive control for observing composite-model queries and
-  aggregate behavior through one AtScale data warehouse connection.
+  Package-based composite of the independently linked Model A and Model B
+  repositories. Both component models use the pg_composite_control warehouse
+  so this catalog can compile and exercise the cross-model aggregate.
 aggressive_agg_promotion: false
 build_speculative_aggs: false
 dataset_properties:

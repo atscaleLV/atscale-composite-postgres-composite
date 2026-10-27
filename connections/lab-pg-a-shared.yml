@@ -1,6 +1,0 @@
-unique_name: lab_pg_a_shared_control
-object_type: connection
-label: Lab PostgreSQL Control - Shared
-as_connection: pg_composite_control
-database: atscale_lab
-schema: shared
