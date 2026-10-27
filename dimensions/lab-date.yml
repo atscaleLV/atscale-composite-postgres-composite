@@ -1,4 +1,4 @@
-unique_name: Lab Date
+unique_name: Lab Date Control
 object_type: dimension
 label: Date
 type: time
@@ -13,28 +13,28 @@ hierarchies:
 level_attributes:
   - unique_name: Year
     label: Year
-    dataset: lab_dim_date
+    dataset: lab_dim_date_control
     name_column: year_number
     key_columns:
       - year_number
     time_unit: year
   - unique_name: Month
     label: Month
-    dataset: lab_dim_date
+    dataset: lab_dim_date_control
     name_column: month_name
     key_columns:
       - month_start
     time_unit: month
   - unique_name: Date
     label: Date
-    dataset: lab_dim_date
+    dataset: lab_dim_date_control
     name_column: date_day
     key_columns:
       - date_day
     time_unit: day
   - unique_name: Date Key
     label: Date Key
-    dataset: lab_dim_date
+    dataset: lab_dim_date_control
     name_column: date_key
     key_columns:
       - date_key

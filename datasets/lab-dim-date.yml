@@ -1,7 +1,7 @@
-unique_name: lab_dim_date
+unique_name: lab_dim_date_control
 object_type: dataset
 label: Lab Date
-connection_id: lab_pg_a_shared
+connection_id: lab_pg_a_shared_control
 table: dim_date
 columns:
   - name: date_key

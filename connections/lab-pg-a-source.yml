@@ -1,6 +1,6 @@
-unique_name: lab_pg_a_source
+unique_name: lab_pg_a_source_control
 object_type: connection
-label: Lab PostgreSQL A - Sales Source
-as_connection: pg_model_a
+label: Lab PostgreSQL Control - Sales Source
+as_connection: pg_composite_control
 database: atscale_lab
 schema: src_a

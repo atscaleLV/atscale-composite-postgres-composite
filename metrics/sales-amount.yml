@@ -1,9 +1,9 @@
-unique_name: m_sales_amount_sum
+unique_name: m_sales_amount_sum_control
 object_type: metric
 label: Sales Amount
-description: Sum of sales amount from the service-account-A fact table.
+description: Sum of sales amount from the sales fact table.
 calculation_method: sum
-dataset: lab_fact_sales
+dataset: lab_fact_sales_control
 column: sales_amount
 format: "$#,##0.00"
 folder: Lab Measures

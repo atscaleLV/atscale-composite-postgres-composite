@@ -1,22 +1,22 @@
-unique_name: composite_postgres_lab
+unique_name: composite_postgres_lab_single_connection
 object_type: catalog
-label: Composite PostgreSQL Lab
-version: 1.5
+label: Composite PostgreSQL Lab - Single Connection Control
+version: 1.8
 description: >-
-  Minimal two-connection lab for observing composite-model query routing and
-  aggregate behavior against PostgreSQL.
+  Deployable positive control for observing composite-model queries and
+  aggregate behavior through one AtScale data warehouse connection.
 aggressive_agg_promotion: false
 build_speculative_aggs: false
 dataset_properties:
-  lab_dim_date:
+  lab_dim_date_control:
     allow_aggregates: true
     allow_local_aggs: true
-    allow_peer_aggs: true
-  lab_fact_sales:
+    allow_peer_aggs: false
+  lab_fact_sales_control:
     allow_aggregates: true
     allow_local_aggs: true
-    allow_peer_aggs: true
-  lab_fact_budget:
+    allow_peer_aggs: false
+  lab_fact_budget_control:
     allow_aggregates: true
     allow_local_aggs: true
-    allow_peer_aggs: true
+    allow_peer_aggs: false

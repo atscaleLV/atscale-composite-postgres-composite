@@ -1,22 +1,22 @@
-unique_name: lab_sales_budget_composite
+unique_name: lab_sales_budget_composite_control
 object_type: composite_model
 label: Lab Sales and Budget Composite
 description: >-
-  Composite of the sales and budget models through their shared Lab Date
-  dimension. Includes a cross-model calculation and a monthly UDA.
+  Positive-control composite of sales and budget through their shared Lab Date
+  dimension, with a cross-model calculation and monthly UDA.
 models:
-  - lab_sales
-  - lab_budget
+  - lab_sales_control
+  - lab_budget_control
 metrics:
-  - unique_name: c_sales_budget_variance
+  - unique_name: c_sales_budget_variance_control
     folder: Lab Measures
 aggregates:
-  - unique_name: uda_monthly_sales_budget
+  - unique_name: uda_monthly_sales_budget_control
     label: Monthly Sales and Budget
     attributes:
       - name: Month
-        dimension: Lab Date
+        dimension: Lab Date Control
     metrics:
-      - m_sales_amount_sum
-      - m_budget_amount_sum
-      - c_sales_budget_variance
+      - m_sales_amount_sum_control
+      - m_budget_amount_sum_control
+      - c_sales_budget_variance_control

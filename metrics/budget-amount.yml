@@ -1,9 +1,9 @@
-unique_name: m_budget_amount_sum
+unique_name: m_budget_amount_sum_control
 object_type: metric
 label: Budget Amount
-description: Sum of budget amount from the service-account-B fact table.
+description: Sum of budget amount from the budget fact table.
 calculation_method: sum
-dataset: lab_fact_budget
+dataset: lab_fact_budget_control
 column: budget_amount
 format: "$#,##0.00"
 folder: Lab Measures

@@ -1,7 +1,7 @@
-unique_name: lab_fact_sales
+unique_name: lab_fact_sales_control
 object_type: dataset
 label: Lab Sales Fact
-connection_id: lab_pg_a_source
+connection_id: lab_pg_a_source_control
 table: fact_sales
 columns:
   - name: sales_row_id
