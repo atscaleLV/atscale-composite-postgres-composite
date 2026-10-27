@@ -11,7 +11,7 @@ relationships:
         - date_key
     to:
       dimension: Lab Date
-      level: Date Key
+      level: Date
 metrics:
   - unique_name: m_budget_amount_sum
     folder: Lab Measures

@@ -30,14 +30,6 @@ level_attributes:
     dataset: lab_dim_date
     name_column: date_day
     key_columns:
-      - date_day
-    time_unit: day
-  - unique_name: Date Key
-    label: Date Key
-    dataset: lab_dim_date
-    name_column: date_key
-    key_columns:
       - date_key
-    is_unique_key: true
     time_unit: day
-    visualize_in_bi_tool: false
+    is_unique_key: true
