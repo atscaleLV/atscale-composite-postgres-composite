@@ -1,10 +1,11 @@
-unique_name: composite_postgres_lab
+unique_name: composite_postgres_lab_two_account_negative
 object_type: catalog
-label: Composite PostgreSQL Lab
-version: 1.5
+label: Composite PostgreSQL Lab - Two Account Negative
+version: 1.8
 description: >-
-  Minimal two-connection lab for observing composite-model query routing and
-  aggregate behavior against PostgreSQL.
+  Expected-failure case demonstrating the one-data-warehouse-per-model
+  restriction when a budget fact and shared Date dimension use different
+  AtScale data warehouses.
 aggressive_agg_promotion: false
 build_speculative_aggs: false
 dataset_properties:

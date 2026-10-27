@@ -1,7 +1,8 @@
 unique_name: lab_budget
 object_type: model
 label: Lab Budget
-description: One-fact budget model routed through the pg_model_b warehouse.
+description: >-
+  Expected-failure model whose fact uses pg_model_b while Date uses pg_model_a.
 relationships:
   - unique_name: lab_budget_to_date
     from:
