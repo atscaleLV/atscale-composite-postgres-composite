@@ -17,8 +17,8 @@ Clone the fixture branch, enter its root, and run:
 
 ```bash
 git clone --branch database-fixture --single-branch \
-  https://github.com/atscaleLV/atscale-composite-postgres-lab.git
-cd atscale-composite-postgres-lab
+  https://github.com/atscaleLV/atscale-composite-postgres-composite.git
+cd atscale-composite-postgres-composite
 ```
 
 Then start and verify the fixture:
@@ -96,16 +96,19 @@ On Docker Desktop for macOS or Windows, an AtScale container can normally use
 `127.0.0.1`. Linux container networking varies; use a secured host address or
 attach the containers to an explicitly chosen shared Docker network.
 
-After creating those three AtScale data warehouses, link Design Center to the
-same GitHub repository:
+After creating those three AtScale data warehouses, link these three private
+GitHub repositories separately in Design Center:
 
 ```text
-https://github.com/atscaleLV/atscale-composite-postgres-lab.git
+https://github.com/atscaleLV/atscale-composite-postgres-model-a.git
+https://github.com/atscaleLV/atscale-composite-postgres-model-b.git
+https://github.com/atscaleLV/atscale-composite-postgres-composite.git
 ```
 
-- `main` is the deployable single-connection composite/UDA control.
-- `two-account-negative` is the exact two-service-account compiler-boundary
-  case and is expected to fail validation on C2026.7.1.
+The three `main` branches form the deployable single-connection composite/UDA
+control. The Model A and Model B `isolated-service-account` branches exercise
+the two database accounts independently; combining those two AtScale warehouse
+IDs remains the expected compiler-boundary case on C2026.7.1.
 
 For Docker Desktop, set the warehouse host to `host.docker.internal`. For a
 host-native AtScale installation, use `127.0.0.1`. On Linux, explicitly choose
