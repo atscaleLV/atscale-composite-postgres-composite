@@ -5,7 +5,7 @@ connection_id: lab_pg_a_source_control
 table: fact_sales
 columns:
   - name: sales_row_id
-    data_type: bigint
+    data_type: long
   - name: date_key
     data_type: int
   - name: sales_amount
